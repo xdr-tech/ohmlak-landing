@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
+import ActiveLink from "../components/ActiveLink";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +25,61 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="flex flex-row justify-between items-center sticky top-8 z-50 m-8 px-8 py-4 rounded-full bg-gray-300 backdrop-filter backdrop-blur-sm bg-opacity-10">
+          <Link href="/">
+            <h4 className="font-bold text-2xl">Ohmlak</h4>
+          </Link>
+          <ul className="flex flex-row gap-4 text-lg">
+            <li>
+              <ActiveLink href="/">Home</ActiveLink>
+            </li>
+            <li>
+              <ActiveLink href="/services">Services</ActiveLink>
+            </li>
+            <li>
+              <ActiveLink href="/projects">Projects</ActiveLink>
+            </li>
+            <li>
+              <ActiveLink href="/about">About us</ActiveLink>
+            </li>
+            <li>
+              <ActiveLink href="/contact">Contact us</ActiveLink>
+            </li>
+          </ul>
+        </nav>
+
         {children}
+
+        <footer className="bg-gray-700 p-8 flex flex-row justify-between">
+          <div className="flex flex-col gap-8">
+            <img
+              src="https://via.placeholder.com/128x128?text=Ohmlak"
+              alt="Ohmlak logo"
+              className="w-24"
+            />
+            <span>All rights reserved by Ohmlak enterprises</span>
+          </div>
+
+          <nav className="px-16 flex flex-row rounded-full">
+            <ul className="flex flex-col gap-4 text-lg">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/services">Services</Link>
+              </li>
+              <li>
+                <Link href="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link href="/about">About us</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact us</Link>
+              </li>
+            </ul>
+          </nav>
+        </footer>
       </body>
     </html>
   );
