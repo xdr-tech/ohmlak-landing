@@ -17,7 +17,7 @@ export default function ActiveLink({
     <Link
       href={href}
       {...props}
-      className={`${props.className} ${isActive ? 'font-extrabold' : ""}`}
+      className={`${props.className} text-[#1E56A0] hover:text-[#163172] ${isActive ? 'font-extrabold text-[#163172]' : ""}`}
     >
       {children}
     </Link>

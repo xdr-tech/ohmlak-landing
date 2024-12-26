@@ -4,29 +4,65 @@ import Link from "next/link";
 export default function Services() {
   return (
     <main className="px-8">
+      <section className="py-32">
+        <div
+          className="bg-[#7CB5FF] px-8 py-16 w-6/12 inline-block float-left"
+          style={{
+            clipPath: "polygon(0 0, 100% 15%, 100% 85%, 0% 100%)",
+          }}
+        >
+          <div>
+            <h3 className="text-3xl">Our mission</h3>
+            <p className="text-lg">
+              is to enhance productivity and efficiency through thoughtfully
+              designed interiors and robust electrical systems tailored to the
+              unique demands of industrial environments. Backed by a skilled
+              team and a passion for innovation, we transform visions into
+              functional realities.
+            </p>
+          </div>
+        </div>
+        <div
+          className="bg-[#C0DBFF] px-8 py-16 w-6/12 inline-block float-right"
+          style={{
+            clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0 86%)",
+          }}
+        >
+          <div>
+            <h3 className="text-3xl text-right">OhmLAK Enterprise </h3>
+            <p className="text-lg">
+              is your trusted partner in Interior Fit out and industrial
+              electrification. Since 2021, we've been committed to delivering
+              excellence in every project, combining technical expertise with
+              creative innovation to redefine industrial spaces.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <ServiceCard
         title="Industrial HT / LT - Electrification"
         description="Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado.Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado"
-        image="https://via.placeholder.com/800x500?text=Ohmlak"
+        image="/assets/services/industrial-electrification.jpeg"
       />
 
       <ServiceCard
         title="Interior fit-out Electrification"
         description="Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado.Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado"
-        image="https://via.placeholder.com/800x500?text=Ohmlak"
+        image="/assets/services/interior-fit-out-electrification.jpeg"
         orientation="right"
       />
 
       <ServiceCard
         title="Networking"
         description="Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado.Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado"
-        image="https://via.placeholder.com/800x500?text=Ohmlak"
+        image="/assets/services/networking.jpeg"
       />
 
       <ServiceCard
         title="MEP work"
         description="Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado.Al proceder, das tu consentimiento para recibir llamadas, mensajes de WhatsApp o SMS, incluidos aquellos enviados de manera automatizada, por parte de la aplicación y sus afiliados al número proporcionado"
-        image="https://via.placeholder.com/800x500?text=Ohmlak"
+        image="/assets/services/mep-work.jpeg"
         orientation="right"
       />
     </main>
@@ -43,7 +79,7 @@ function ServiceCard({ title, description, image, orientation = "left" }) {
       }`}
     >
       <div
-        className={`w-1/3 flex-grow ${
+        className={`w-1/3 h-min aspect-square flex-grow  object-cover ${
           orientation === "left" ? "-ml-24" : "-mr-24"
         }`}
       >

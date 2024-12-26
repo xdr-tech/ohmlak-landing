@@ -20,15 +20,13 @@ export default function Home() {
               <div className="p-1">
                 <Card>
                   <CardContent
-                    className="flex items-center justify-center p-6 min-h-96 bg-no-repeat"
+                    className="flex items-center justify-center p-6 min-h-96 bg-no-repeat aspect-video"
                     style={{
                       background:
-                        'url("https://via.placeholder.com/800x500?text=Ohmlak")',
-                      backgroundPosition: "center",
+                        'no-repeat center url("assets/hero-carousel-1.jpeg")',
+                      backgroundSize: "cover",
                     }}
-                  >
-                    <Button>Contact us</Button>
-                  </CardContent>
+                  ></CardContent>
                 </Card>
               </div>
             </CarouselItem>
@@ -36,10 +34,28 @@ export default function Home() {
         </CarouselContent>
       </Carousel>
 
-      <section className="p-8 flex flex-row gap-8 items-center">
-        <div className="w-2/3">
-          <h2 className="text-8xl">We work without</h2>
-          <p className="text-2xl">
+      <div className="text-center text-xl">
+        <p className="mb-8">
+          "Empowering Industries, Designing Futures, Keeping good it Hertz!."
+        </p>
+        <Link
+          href="/contact"
+          className="bg-[#1E56A0] text-white px-12 py-4 rounded-full"
+        >
+          Say Hello..!
+        </Link>
+      </div>
+
+      <section className="p-8 flex flex-col lg:flex-row gap-8 items-center">
+        <div className="w-full md:w-2/3">
+          <h2 className="text-6xl">
+            We
+            <br />
+            Work
+            <br />
+            With Dignity
+          </h2>
+          <p className="mt-8 text-xl">
             Al proceder, das tu consentimiento para recibir llamadas, mensajes
             de WhatsApp o SMS, incluidos aquellos enviados de manera
             automatizada, por parte de la aplicación y sus afiliados al número
@@ -49,11 +65,11 @@ export default function Home() {
             número proporcionado
           </p>
         </div>
-        <div className="p-8 w-1/3 mr-[50px]">
+        <div className="p-8 w-full md:w-1/3 mr-[50px]">
           <img
-            src="https://via.placeholder.com/800x500?text=Ohmlak"
+            src="assets/home-quote.jpeg"
             alt=""
-            className="rounded-tl-3xl shadow-[50px_50px_0px_0px_white] aspect-square"
+            className="rounded-tl-3xl shadow-[50px_50px_0px_0px_#1E56A0] aspect-square"
           />
         </div>
       </section>
@@ -77,25 +93,25 @@ export default function Home() {
 
       <section className="p-8 mt-12 flex flex-col items-center">
         <span className="text-4xl font-bold">Our recent projects</span>
-        <div class="grid grid-cols-3 gap-4 p-6">
+        <div className="grid grid-cols-3 gap-4 p-6">
           {/* <!-- First Row --> */}
-          <div class="col-span-1 border p-4 rounded-lg">
-            <h2 class="text-lg font-bold">Head Line</h2>
+          <div className="col-span-1 border p-4 rounded-lg">
+            <h2 className="text-lg font-bold">Head Line</h2>
             <p>
               Al proceder, das tu consentimiento para recibir llamadas, mensajes
               de WhatsApp o SMS, incluidos aquellos enviados
             </p>
           </div>
-          <div class="col-span-2 grid grid-cols-2 gap-4">
-            <div class="border p-4 rounded-lg">
-              <h2 class="text-lg font-bold">Head Line</h2>
+          <div className="col-span-2 grid grid-cols-2 gap-4">
+            <div className="border p-4 rounded-lg">
+              <h2 className="text-lg font-bold">Head Line</h2>
               <p>
                 Al proceder, das tu consentimiento para recibir llamadas,
                 mensajes de WhatsApp o SMS, incluidos aquellos enviados
               </p>
             </div>
-            <div class="border p-4 rounded-lg">
-              <h2 class="text-lg font-bold">Head Line</h2>
+            <div className="border p-4 rounded-lg">
+              <h2 className="text-lg font-bold">Head Line</h2>
               <p>
                 Al proceder, das tu consentimiento para recibir llamadas,
                 mensajes de WhatsApp o SMS, incluidos aquellos enviados
@@ -104,23 +120,23 @@ export default function Home() {
           </div>
 
           {/* <!-- Second Row --> */}
-          <div class="col-span-3 grid grid-cols-4 gap-4">
-            <div class="col-span-2 border p-4 rounded-lg bg-gray-100">
-              <h2 class="text-lg font-bold">Head Line</h2>
+          <div className="col-span-3 grid grid-cols-4 gap-4">
+            <div className="col-span-2 border p-4 rounded-lg bg-gray-100">
+              <h2 className="text-lg font-bold">Head Line</h2>
               <p>
                 Al proceder, das tu consentimiento para recibir llamadas,
                 mensajes de WhatsApp o SMS, incluidos aquellos enviados
               </p>
             </div>
-            <div class="border p-4 rounded-lg">
-              <h2 class="text-lg font-bold">Head Line</h2>
+            <div className="border p-4 rounded-lg">
+              <h2 className="text-lg font-bold">Head Line</h2>
               <p>
                 Al proceder, das tu consentimiento para recibir llamadas,
                 mensajes de WhatsApp o SMS, incluidos aquellos enviados
               </p>
             </div>
-            <div class="border p-4 rounded-lg">
-              <h2 class="text-lg font-bold">Explore More</h2>
+            <div className="border p-4 rounded-lg">
+              <h2 className="text-lg font-bold">Explore More</h2>
             </div>
           </div>
         </div>
